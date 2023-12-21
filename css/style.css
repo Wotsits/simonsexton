@@ -489,7 +489,7 @@ footer {
     }
 
     #hero{
-        height: calc(100vh - 110px);
+        height: calc(100vh - 125px);
     }
 
     #hero-text h1 {
