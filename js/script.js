@@ -4,6 +4,7 @@ function openCloseNav() {
 }
 
 function selectLightMode() {
+  localStorage.setItem("theme", "light");
   const root = document.querySelector(":root");
   root.style.setProperty("--background-color", lightColors.background);
   root.style.setProperty("--first-color", lightColors.first);
@@ -13,10 +14,11 @@ function selectLightMode() {
   root.style.setProperty("--text-color", lightColors.text);
   root.style.setProperty("--menu-background-color", lightColors.menu);
   root.style.setProperty("--box-shadow", lightColors.boxShadow);
-    root.style.setProperty("--border", lightColors.border);
+  root.style.setProperty("--border", lightColors.border);
 }
 
 function selectDarkMode() {
+  localStorage.setItem("theme", "dark");
   const root = document.querySelector(":root");
   root.style.setProperty("--background-color", darkColors.background);
   root.style.setProperty("--first-color", darkColors.first);
@@ -62,7 +64,7 @@ const darkColors = {
   text: "#fff",
   menu: "rgba(1, 1, 1, 0.9)",
   boxShadow: undefined,
-  border: "solid 1px #white"
+  border: "solid 1px #white",
 };
 
 const lightColors = {
@@ -73,20 +75,29 @@ const lightColors = {
   fourth: "#DE29BE",
   text: "#111",
   menu: "rgba(255, 255, 255, 0.9)",
-    boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
-    border: "solid 1px #333"
+  boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
+  border: "solid 1px #333",
 };
 
 document.addEventListener("DOMContentLoaded", () => {
   const hero = document.querySelector("#hero-text");
   const highlight = hero.querySelector(".highlight");
 
-  const osDayOrNight = window.matchMedia("(prefers-color-scheme: light)");
-  
-  if (osDayOrNight.matches) {
-    selectLightMode();
+  const theme = localStorage.getItem("theme");
+  if (theme) {
+    if (theme === "dark") {
+      selectDarkMode();
+    } else if (theme === "light") {
+      selectLightMode();
+    }
   } else {
-    selectDarkMode();
+    const osDayOrNight = window.matchMedia("(prefers-color-scheme: light)");
+
+    if (osDayOrNight.matches) {
+      selectLightMode();
+    } else {
+      selectDarkMode();
+    }
   }
 
   setInterval(() => {
