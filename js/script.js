@@ -3,6 +3,17 @@ function openCloseNav() {
   nav.classList.toggle("open");
 }
 
+function scrollToContent() {
+    const content = document.querySelector(".first-piece-of-content");
+    const offsetY = -95;
+    const offset = content.getBoundingClientRect().top + window.pageYOffset + offsetY;
+    window.scrollTo({
+        top: offset,
+        behavior: "smooth",
+    });
+
+}
+
 function selectLightMode() {
   localStorage.setItem("theme", "light");
   const root = document.querySelector(":root");
