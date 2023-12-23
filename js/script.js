@@ -1,6 +1,13 @@
 function openCloseNav() {
   const nav = document.getElementById("mobile-nav-menu");
   nav.classList.toggle("open");
+  const body = document.querySelector("body");
+  if (nav.classList.contains("open")) {
+    body.style.overflow = "hidden";
+  }
+  else {
+    body.style.overflow = "auto";
+  }
 }
 
 function scrollToContent() {
@@ -12,7 +19,6 @@ function scrollToContent() {
         top: offset,
         behavior: "smooth",
     });
-
 }
 
 function selectLightMode() {
