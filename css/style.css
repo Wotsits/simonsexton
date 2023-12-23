@@ -361,6 +361,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    gap: 2rem;
 }
 
 #about-text {
@@ -376,7 +377,7 @@ header {
 
 #about-text p {
     width: 100%;
-    text-align: right;
+    text-align: justify;
 }
 
 #about-text .button-container {
