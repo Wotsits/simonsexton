@@ -107,6 +107,14 @@ button {
     opacity: 0;
 }
 
+.clickable {
+    cursor: pointer;
+}
+
+.purple-on-hover:hover {
+    color: var(--first-color);
+}
+
 /* HEADER */
 
 header {
@@ -147,7 +155,7 @@ header {
 }
 
 .dark-light-switch {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 #burger {
@@ -446,7 +454,7 @@ footer {
 .contact-details-text p {
     margin: 0;
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .contact-details-text i {
