@@ -341,7 +341,7 @@ header {
 /* SKILLS */
 
 #skills {
-    background: var(--first-color);
+    background: linear-gradient(var(--background-color),var(--first-color));
 }
 
 .skill {
