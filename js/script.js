@@ -13,7 +13,7 @@ function openCloseNav() {
 function scrollToContent() {
     const content = document.querySelector(".first-piece-of-content");
     const isDesktop = window.matchMedia("(min-width: 768px)");
-    const offsetY = isDesktop.matches ? -95 : -60;
+    const offsetY = -80;
     const offset = content.getBoundingClientRect().top + window.pageYOffset + offsetY;
     window.scrollTo({
         top: offset,

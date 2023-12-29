@@ -47,48 +47,50 @@
   </head>
 
   <body>
-    <header class="centering-container">
-      <div class="max-w-1026">
-        <div id="header">
-          <div id="header-left">
-            <h1 id="logo">Simon Sexton</h1>
-          </div>
-          <div id="header-right">
-            <nav id="nav-menu">
-                <div id="dark-light-switch-container">
-                    <i
-                      class="fa-solid fa-sun dark-light-switch clickable purple-on-hover"
-                      onclick="selectLightMode()"
-                    ></i>
-                    <span class="dark-light-switch">|</span>
-                    <i
-                      class="fa-solid fa-moon dark-light-switch clickable purple-on-hover"
-                      onclick="selectDarkMode()"
-                    ></i>
-                  </div>
-              <!-- <li><a href="index.html">Home</a></li> -->
-              <!-- <li><a href="about.html">About</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="blog.html">Blog</a></li> -->
-              <li><a href="contact.html">Contact Me</a></li>
-              
-            </nav>
+    <div id="top-block">
+      <header class="centering-container">
+        <div class="max-w-1026">
+          <div id="header">
+            <div id="header-left">
+              <h1 id="logo">Simon Sexton</h1>
+            </div>
 
-            <div id="burger" onclick="openCloseNav()">
-              <i class="fa-solid fa-bars"></i>
+            <div id="header-right">
+              <nav id="nav-menu">
+                <div id="dark-light-switch-container">
+                  <i
+                    class="fa-solid fa-sun dark-light-switch clickable purple-on-hover"
+                    onclick="selectLightMode()"
+                  ></i>
+                  <span class="dark-light-switch">|</span>
+                  <i
+                    class="fa-solid fa-moon dark-light-switch clickable purple-on-hover"
+                    onclick="selectDarkMode()"
+                  ></i>
+                </div>
+                <!-- <li><a href="index.html">Home</a></li> -->
+                <!-- <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li> -->
+                <li><a href="contact.html">Contact Me</a></li>
+              </nav>
+
+              <div id="burger" onclick="openCloseNav()">
+                <i class="fa-solid fa-bars"></i>
+              </div>
             </div>
           </div>
+          <!-- end of header -->
         </div>
-      </div>
-    </header>
+        <!-- end of max-w-1026 -->
+      </header>
 
-    <main id="content">
       <div id="hero">
         <svg
           id="hero-background"
           viewBox="0 0 900 600"
           width="100%"
-          height="100%"
+          height="calc(100vh - 80px)"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           version="1.1"
@@ -98,8 +100,8 @@
             class="adopt-background"
             x="0"
             y="0"
-            width="100%"
-            height="100%"
+            width="900"
+            height="600"
           ></rect>
           <path
             d="M0 381L21.5 387.2C43 393.3 86 405.7 128.8 407.7C171.7 409.7 214.3 401.3 257.2 411.3C300 421.3 343 449.7 385.8 466.2C428.7 482.7 471.3 487.3 514.2 472.5C557 457.7 600 423.3 642.8 419C685.7 414.7 728.3 440.3 771.2 459C814 477.7 857 489.3 878.5 495.2L900 501L900 601L878.5 601C857 601 814 601 771.2 601C728.3 601 685.7 601 642.8 601C600 601 557 601 514.2 601C471.3 601 428.7 601 385.8 601C343 601 300 601 257.2 601C214.3 601 171.7 601 128.8 601C86 601 43 601 21.5 601L0 601Z"
@@ -126,7 +128,11 @@
           ></i>
         </div>
       </div>
+      <!-- end of hero -->
+    </div>
+    <!-- end of top-block -->
 
+    <main id="content">
       <section id="services" class="centering-container first-piece-of-content">
         <div class="max-w-1026">
           <h2 class="section-leader dark">Services</h2>
