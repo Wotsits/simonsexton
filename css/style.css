@@ -81,6 +81,24 @@ button {
     transition: all 0.2s ease-in-out;
 }
 
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-4 {
+    margin-bottom: 4rem;
+}
+
+.mb-6 {
+    margin-bottom: 6rem;
+}
+
+video {
+    width: 100%;
+    height: auto;
+
+}
+
 /* UTILITIES */
 
 .centering-container {
@@ -373,14 +391,14 @@ header {
 
 /* ABOUT */
 
-#about-display {
+.half-and-half  {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 2rem;
 }
 
-#about-text {
+.half-and-half-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -518,14 +536,14 @@ footer {
         margin-bottom: 2rem;
     }
 
-    #about-display {
+    .half-and-half {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    #about-text {
+    .half-and-half-text {
         font-size: 1rem;
         line-height: 2rem;
     }
