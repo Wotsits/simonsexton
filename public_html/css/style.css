@@ -63,7 +63,7 @@ nav a {
 
 a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--fourth-color);
 }
 
 a:hover {
@@ -79,6 +79,10 @@ button {
     font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+}
+
+p {
+    width: 100%;
 }
 
 .mb-2 {
@@ -135,7 +139,7 @@ video {
 
 #top-block {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
 }
@@ -164,6 +168,9 @@ header {
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: 4px;
+}
+
+#logo a {
     color: var(--text-color);
 }
 
